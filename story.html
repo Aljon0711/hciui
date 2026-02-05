@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Social Story: Sharing Toys</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#308ce8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0e141b] dark:text-slate-100 font-display">
+<div class="relative flex h-screen w-full flex-col overflow-hidden max-w-[480px] mx-auto bg-background-light dark:bg-background-dark">
+<!-- Top App Bar -->
+<div class="flex items-center px-4 py-3 justify-between">
+<button class="text-[#0e141b] dark:text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h2 class="text-[#0e141b] dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Social Story</h2>
+<div class="size-10"></div> <!-- Spacer for symmetry -->
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col justify-between overflow-y-auto px-4 pb-8">
+<div class="space-y-6" id="story-content">
+<!-- Large Illustration Container -->
+<div class="@container">
+<div class="mt-2">
+<div class="w-full aspect-square bg-white dark:bg-slate-800 flex flex-col justify-center items-center overflow-hidden rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+<img id="story-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqtfZC-aPCVVUTMmhaTp2qu73n4N7NBNJIku631Iww5E6gjvOMalTTc03izkhFkFQSWxf0XVqUHk817G9P-iSJaM46VeKDq2YbIWQHFTlj6N-aRwLLt3jSQu5NTieBJ7StGldJmB78GIyWAtE3-fh6SjXc8eENkE1qtNvhBYGDcNw6sRNAawrXanx8VrVt2nrc8cj2-Jazc-gpbHFRXI8_W4x6XWrNtV0SyqX-03esX3sqyBaLm4OrgKtHL3yqUtoNpYZWyxOzIUMZ" alt="Illustration of two happy children sharing colorful toy blocks" class="w-full h-full object-contain"/>
+</div>
+</div>
+</div>
+<!-- Story Text -->
+<div class="px-2">
+<h3 id="story-title" class="text-[#0e141b] dark:text-slate-100 text-2xl font-bold leading-snug text-center">
+                        It's fun to share our toys with friends.
+                    </h3>
+<p id="story-body" class="text-slate-600 dark:text-slate-400 text-center mt-3 text-lg leading-relaxed px-4">
+                        When we share, everyone gets a turn to play and feel happy.
+                    </p>
+</div>
+<!-- Audio Action -->
+<div class="flex justify-center">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary/10 text-primary hover:bg-primary/20 transition-colors gap-3 font-bold text-lg">
+<span class="material-symbols-outlined text-2xl">volume_up</span>
+<span>Listen</span>
+</button>
+</div>
+</div>
+<!-- Footer Navigation -->
+<div class="mt-auto pt-10 pb-24">
+<!-- Progress Indicators -->
+<div class="flex w-full flex-row items-center justify-center gap-2 mb-8" id="story-progress">
+<div class="h-2 w-6 rounded-full bg-primary" data-step="0"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-600" data-step="1"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-600" data-step="2"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-600" data-step="3"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-600" data-step="4"></div>
+</div>
+<!-- Next Button -->
+<div class="flex flex-col gap-3">
+<button id="next-story" class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-16 bg-primary text-white hover:bg-primary/90 transition-all shadow-md active:scale-[0.98] font-bold text-xl">
+<span id="next-story-label">Next Page</span>
+<span class="material-symbols-outlined ml-2" id="next-story-icon">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Global Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-20">
+<a href="home.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Home</span>
+</a>
+<a href="emotion.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">mood</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Emotion</span>
+</a>
+<a href="routine.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">event_note</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Routine</span>
+</a>
+<a href="story.html" class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Story</span>
+</a>
+<a href="report.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Report</span>
+</a>
+</nav>
+</div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const pages = [
+      {
+        title: "It's fun to share our toys with friends.",
+        body: "When we share, everyone gets a turn to play and feel happy.",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBqtfZC-aPCVVUTMmhaTp2qu73n4N7NBNJIku631Iww5E6gjvOMalTTc03izkhFkFQSWxf0XVqUHk817G9P-iSJaM46VeKDq2YbIWQHFTlj6N-aRwLLt3jSQu5NTieBJ7StGldJmB78GIyWAtE3-fh6SjXc8eENkE1qtNvhBYGDcNw6sRNAawrXanx8VrVt2nrc8cj2-Jazc-gpbHFRXI8_W4x6XWrNtV0SyqX-03esX3sqyBaLm4OrgKtHL3yqUtoNpYZWyxOzIUMZ"
+      },
+      {
+        title: "Sometimes, I am playing by myself.",
+        body: "A friend might come over and want to play with me too.",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAIwcoOT-0M5bfulX-dRELmFjiCfaNVbcSEfLZpmnTdoeWqWFZl28fRwASicGzfmXLLUX6lv0TudgBEIvETgA2xBqAr4QiMuSGyZhev2kaweuxv7fltHXi1CqIFQKEyIGoRqftd191ps5lmaNQovRESm5NQh-mMaUPZk6bJsSD7xNcmFgICTwqVgya1Q4L4QmsNQZNbCZGeE26zUTraizSMqQAcxdWnH7tZHo0_LYEvmGicRDHQuwP-mg7f5boUX_od8cH7jqP0Csxu"
+      },
+      {
+        title: "I can share my blocks with my friend.",
+        body: "I pick up a block and give it to my friend so we can play together.",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAIwcoOT-0M5bfulX-dRELmFjiCfaNVbcSEfLZpmnTdoeWqWFZl28fRwASicGzfmXLLUX6lv0TudgBEIvETgA2xBqAr4QiMuSGyZhev2kaweuxv7fltHXi1CqIFQKEyIGoRqftd191ps5lmaNQovRESm5NQh-mMaUPZk6bJsSD7xNcmFgICTwqVgya1Q4L4QmsNQZNbCZGeE26zUTraizSMqQAcxdWnH7tZHo0_LYEvmGicRDHQuwP-mg7f5boUX_od8cH7jqP0Csxu"
+      },
+      {
+        title: "We can build a big tower together.",
+        body: "Taking turns and sharing makes playing even more fun.",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAGVe3xTjkRyOe-f55JkYmIdCJEmcevQCxMAKkBjmJ5pzz2j2Fb21Lxqdu_ADiGaL4WFPVal31SDCPWeAn7pl6PcYZfkvAaIc7xOabueefbOJ1hi9NisuU3o0u8hvplNQsXnsas_yxM4t8AQighxyeyCwB9gOzSeJTXUIG2mcM-pG6lvHggvOQDxflJjZ7LhliOEAH4ZbbDEjLCQztYVdClSChrpX6JBxWs7VYCEsjQO60Qtm22mHBNLyMzEUMYEr9cFRnBTeh_DIW"
+      },
+      {
+        title: "Sharing makes me and my friend happy!",
+        body: "We did it together. Playing with friends is fun!",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAGVe3xTjkRyOe-f55JkYmIdCJEmcevQCxMAKkBjmJ5pzz2j2Fb21Lxqdu_ADiGaL4WFPVal31SDCPWeAn7pl6PcYZfkvAaIc7xOabueefbOJ1hi9NisuU3o0u8hvplNQsXnsas_yxM4t8AQighxyeyCwB9gOzSeJTXUIG2mcM-pG6lvHggvOQDxflJjZ7LhliOEAH4ZbbDEjLCQztYVdClSChrpX6JBxWs7VYCEsjQO60Qtm22mHBNLyMzEUMYEr9cFRnBTeh_DIW"
+      }
+    ];
+
+    let current = 0;
+
+    const imageEl = document.getElementById('story-image');
+    const titleEl = document.getElementById('story-title');
+    const bodyEl = document.getElementById('story-body');
+    const nextBtn = document.getElementById('next-story');
+    const nextLabel = document.getElementById('next-story-label');
+    const nextIcon = document.getElementById('next-story-icon');
+    const dots = document.querySelectorAll('#story-progress [data-step]');
+
+    function renderPage(index) {
+      const page = pages[index];
+      if (!page) return;
+      imageEl.src = page.image;
+      titleEl.textContent = page.title;
+      bodyEl.textContent = page.body;
+
+      dots.forEach((dot) => {
+        const step = Number(dot.getAttribute('data-step'));
+        if (step === index) {
+          dot.classList.remove('w-2', 'bg-slate-300', 'dark:bg-slate-600');
+          dot.classList.add('w-6', 'bg-primary');
+        } else {
+          dot.classList.add('w-2');
+          dot.classList.remove('w-6', 'bg-primary');
+          dot.classList.add('bg-slate-300', 'dark:bg-slate-600');
+        }
+      });
+
+      if (index === pages.length - 1) {
+        nextLabel.textContent = 'Finish Story';
+        nextIcon.textContent = 'check_circle';
+      } else {
+        nextLabel.textContent = 'Next Page';
+        nextIcon.textContent = 'arrow_forward';
+      }
+    }
+
+    nextBtn.addEventListener('click', () => {
+      if (current === pages.length - 1) {
+        window.location.href = 'home.html';
+        return;
+      }
+      current = Math.min(current + 1, pages.length - 1);
+      renderPage(current);
+      const container = document.getElementById('story-content');
+      if (container) {
+        container.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    renderPage(current);
+  });
+</script>
+</body></html>

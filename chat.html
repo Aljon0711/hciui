@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Communication Chat Practice</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#308ce8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden max-w-md mx-auto">
+<!-- Top App Bar -->
+<div class="flex items-center bg-white dark:bg-slate-900 p-4 pb-2 justify-between border-b border-slate-100 dark:border-slate-800">
+<div class="text-primary flex size-12 shrink-0 items-center justify-center cursor-pointer">
+<a href="home.html" class="material-symbols-outlined text-3xl">chevron_left</a>
+</div>
+<h2 class="text-[#0e141b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Daily Feelings</h2>
+</div>
+<!-- AI Character Profile Section -->
+<div class="flex p-6 @container">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-primary/10 border-4 border-primary/20 bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 shadow-sm flex items-center justify-center" data-alt="Friendly cartoon blue robot character smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBOVzmjmWnlJI_C13H2j3au3TvU3HOzwqNg_Ss9XI1IOtbO0DMsK46njFWv-Fbq7B4-xhcV4j7qTta1O0iO7DTrntf5YqC8e5A4tSxXdV_8WPfE3V-pG2cA8leKiNzFsW73R65H3V2sq6AJGQovQepX8vI8qcTP_yENYC0LauZRt0hqlw6mAPPvxli5r5KZy2QWRRzhUW_ckxHnsZ8mAaqWKcGApVb-QULaMf94ZVEnq6r_FMsOCM-yZ2bQP06asE-c_EoUd8IYu8OK");'>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-[#0e141b] dark:text-white text-[24px] font-bold leading-tight">Buddy</p>
+<div class="flex items-center gap-2">
+<span class="flex h-2 w-2 rounded-full bg-green-500"></span>
+<p class="text-[#4e7397] dark:text-slate-400 text-base font-normal">Ready to chat</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat Display Area -->
+<div class="flex-1 px-6 py-2">
+<div class="flex items-end gap-3 mb-8">
+<div class="bg-primary/20 aspect-square bg-cover rounded-full w-12 h-12 shrink-0 border-2 border-white dark:border-slate-700 flex items-center justify-center overflow-hidden" data-alt="Small avatar of Buddy the robot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlMEhGDpNhGJ9eMbmX-Jw0Hbq2aQslWnbMGhpA82ZUK43lVKiA1nUmGYJDMzqazB5y2PYmxGYoXFAn6mqGPpgXgFfDWMF3kCK-ZwvYhWdjrD5AWF-hTf9lyDamwdShzGR0kQoniTH4UblRXwY-nZNAAfzy_fJl-chArpbQNzTpq5ori9FHh-RTq8RHkuowaHEeNtjYljfT2A7c3VTPoXKni_6wT4DiUhNfBq0-iapfDL0j3FmtqbupkCg4aqWovdepjc71gxe2lbiP");'>
+</div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-[#4e7397] dark:text-slate-400 text-xs font-medium px-2">BUDDY</p>
+<div class="relative bg-white dark:bg-slate-800 text-[#0e141b] dark:text-white rounded-2xl rounded-bl-none px-5 py-4 shadow-sm border border-slate-100 dark:border-slate-700">
+<p class="text-lg font-medium leading-normal">How are you today?</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Response Selection Section -->
+<div class="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm rounded-t-[2.5rem] p-6 pb-12 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-center mb-6">
+<div class="w-12 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+<h4 class="text-[#4e7397] dark:text-slate-300 text-base font-bold leading-normal tracking-wide text-center mb-6 uppercase">Choose your answer</h4>
+<div class="flex justify-center">
+<div class="flex flex-1 gap-4 max-w-[480px] flex-col items-stretch">
+<!-- Happy Option -->
+<button class="group flex min-h-[100px] cursor-pointer items-center justify-between overflow-hidden rounded-2xl px-6 bg-white dark:bg-slate-800 border-2 border-green-100 dark:border-green-900/30 hover:border-green-400 dark:hover:border-green-500 shadow-sm active:scale-95 transition-all">
+<div class="flex items-center gap-4">
+<span class="text-5xl">😊</span>
+<span class="text-[#0e141b] dark:text-white text-xl font-bold">I am happy</span>
+</div>
+<span class="material-symbols-outlined text-green-500 opacity-0 group-hover:opacity-100">check_circle</span>
+</button>
+<!-- Tired Option -->
+<button class="group flex min-h-[100px] cursor-pointer items-center justify-between overflow-hidden rounded-2xl px-6 bg-white dark:bg-slate-800 border-2 border-blue-100 dark:border-blue-900/30 hover:border-blue-400 dark:hover:border-blue-500 shadow-sm active:scale-95 transition-all">
+<div class="flex items-center gap-4">
+<span class="text-5xl">😴</span>
+<span class="text-[#0e141b] dark:text-white text-xl font-bold">I am tired</span>
+</div>
+<span class="material-symbols-outlined text-blue-500 opacity-0 group-hover:opacity-100">check_circle</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

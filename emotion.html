@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#308ce8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col max-w-[480px] mx-auto bg-background-light dark:bg-background-dark">
+<!-- Top App Bar with Progress/Reinforcement -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-primary flex size-12 shrink-0 items-center cursor-pointer" data-icon="close">
+<span class="material-symbols-outlined text-3xl">close</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Emotion Game</h2>
+<div class="flex size-12 shrink-0 items-center justify-end">
+<span class="material-symbols-outlined text-primary text-3xl">settings</span>
+</div>
+</div>
+<!-- Reinforcement/Star Counter -->
+<div class="px-4 py-2">
+<div class="flex items-center justify-between gap-4 rounded-xl p-4 bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700">
+<div class="flex flex-col">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Your Progress</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-yellow-500 fill-1">stars</span>
+<p class="text-slate-900 dark:text-white text-3xl font-bold leading-tight">12</p>
+<p class="text-green-600 dark:text-green-400 text-base font-bold leading-normal bg-green-100 dark:bg-green-900/30 px-2 rounded-full">+1</p>
+</div>
+</div>
+<div class="flex gap-1">
+<div class="h-2 w-8 rounded-full bg-primary"></div>
+<div class="h-2 w-8 rounded-full bg-primary"></div>
+<div class="h-2 w-8 rounded-full bg-primary/30"></div>
+<div class="h-2 w-8 rounded-full bg-primary/30"></div>
+</div>
+</div>
+</div>
+<!-- Main Content Area / Large Image -->
+<div class="flex flex-col grow px-4 py-6">
+<div class="w-full bg-white dark:bg-slate-800 rounded-xl p-2 shadow-md border-4 border-primary/20">
+<div class="w-full aspect-square rounded-lg overflow-hidden flex items-center justify-center bg-blue-50 dark:bg-slate-900">
+<img class="w-full h-full object-contain" data-alt="A friendly cartoon face showing a clear happy emotion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDvXi2UWw8inXggM4nL7jpPRUGqylrfs5rQlIe0L14eg-H3i1J7CszKbdFgXEGmHxuI6LbSIcW47SDUJlxpMa5ISxAMf8HX7qTANteffFdGGFayaRcVpwu5nYJ2qZB9qpystAfsu5lhmjS84YitNGeIfUasd8QCw4jdcqYPyanRMr8F3UJmWMnJAbThM3U0aJ6YBN7QlrUuL_NCUr9NM2fJWzPtHIfQLC3fNPxj3XripMPJoTdGTJxKqgIGem7mIjgg6e7LaPCdhv4"/>
+</div>
+</div>
+<!-- Instruction -->
+<div class="text-center py-6">
+<h4 class="text-primary text-lg font-bold leading-normal tracking-wide">How do they feel?</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Tap the best answer</p>
+</div>
+<!-- Interaction Area: Large Buttons for ASD Accessibility -->
+<div class="flex flex-col gap-4 pb-8">
+<!-- Option 1: Correct -->
+<button class="flex min-h-[72px] cursor-pointer items-center justify-between overflow-hidden rounded-xl px-6 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-slate-200 dark:border-slate-700 hover:border-primary active:scale-95 transition-all shadow-sm">
+<div class="flex items-center gap-4">
+<span class="text-3xl">😊</span>
+<span class="text-xl font-bold">Happy</span>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</button>
+<!-- Option 2 -->
+<button class="flex min-h-[72px] cursor-pointer items-center justify-between overflow-hidden rounded-xl px-6 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-slate-200 dark:border-slate-700 hover:border-primary active:scale-95 transition-all shadow-sm">
+<div class="flex items-center gap-4">
+<span class="text-3xl">😢</span>
+<span class="text-xl font-bold">Sad</span>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</button>
+<!-- Option 3 -->
+<button class="flex min-h-[72px] cursor-pointer items-center justify-between overflow-hidden rounded-xl px-6 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-slate-200 dark:border-slate-700 hover:border-primary active:scale-95 transition-all shadow-sm">
+<div class="flex items-center gap-4">
+<span class="text-3xl">😠</span>
+<span class="text-xl font-bold">Angry</span>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Global Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-20">
+<a href="home.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Home</span>
+</a>
+<a href="emotion.html" class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl">mood</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Emotion</span>
+</a>
+<a href="routine.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">event_note</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Routine</span>
+</a>
+<a href="story.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Story</span>
+</a>
+<a href="report.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Report</span>
+</a>
+</nav>
+<div class="h-20"></div>
+</div>
+</body></html>

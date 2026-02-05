@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Daily Routine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#308ce8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                        "success": "#4ade80",
+                        "accent": "#facc15"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-blue: #308ce8;
+            --soft-bg: #f6f7f8;
+        }
+        body {
+            font-family: 'Lexend', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }.visual-support-icon {
+            font-size: 3.5rem !important;
+            color: #0e141b;
+        }
+        .dark .visual-support-icon {
+            color: white;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0e141b] dark:text-slate-100 antialiased font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl">
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md z-20 border-b border-slate-100 dark:border-slate-800">
+<div class="text-primary flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-3xl">settings</span>
+</div>
+<h2 class="text-[#0e141b] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center">My Daily Routine</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-12 bg-transparent text-primary">
+<span class="material-symbols-outlined text-3xl">calendar_month</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-4">
+<div class="flex gap-6 justify-between items-end">
+<p class="text-[#0e141b] dark:text-slate-200 text-lg font-semibold">Morning Progress</p>
+<p class="text-[#4e7397] dark:text-slate-400 text-sm font-medium">2 of 6 tasks done</p>
+</div>
+<div class="h-5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden shadow-inner">
+<div class="h-full rounded-full bg-primary" style="width: 33%;"></div>
+</div>
+</div>
+<div class="px-4 py-2">
+<div class="flex flex-col gap-2 mb-2">
+<span class="text-primary text-xs font-black tracking-[0.15em] uppercase">What's Next</span>
+</div>
+<div class="flex items-center justify-between gap-4 rounded-3xl bg-primary/10 dark:bg-primary/20 p-5 border-4 border-primary shadow-lg">
+<div class="flex items-center gap-4">
+<div class="size-24 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center shadow-sm border-2 border-primary/20">
+<span class="material-symbols-outlined visual-support-icon">breakfast_dining</span>
+</div>
+<div>
+<p class="text-[#0e141b] dark:text-white text-2xl font-bold leading-tight">Eat Breakfast</p>
+<p class="text-primary font-bold text-sm uppercase">Right Now!</p>
+</div>
+</div>
+<button class="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-4xl">check</span>
+</button>
+</div>
+</div>
+<h3 class="text-[#0e141b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">Today's Schedule</h3>
+<div class="flex flex-col gap-4 p-4 pb-24">
+<div class="flex items-center gap-4 rounded-3xl bg-success/10 dark:bg-success/20 p-4 border-2 border-success/30">
+<div class="size-20 shrink-0 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center shadow-sm opacity-60">
+<span class="material-symbols-outlined visual-support-icon !text-4xl text-yellow-500">light_mode</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="text-[#0e141b] dark:text-white text-xl font-bold line-through opacity-50">Wake Up</p>
+<div class="flex items-center gap-1 text-accent">
+<span class="material-symbols-outlined text-sm filled-icon">stars</span>
+<span class="text-xs font-black uppercase">Awesome!</span>
+</div>
+</div>
+<div class="flex items-center justify-center size-10 shrink-0 rounded-full bg-success text-white">
+<span class="material-symbols-outlined text-2xl font-bold">check</span>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-3xl bg-success/10 dark:bg-success/20 p-4 border-2 border-success/30">
+<div class="size-20 shrink-0 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center shadow-sm opacity-60">
+<span class="material-symbols-outlined visual-support-icon !text-4xl text-blue-400">cleaning_services</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="text-[#0e141b] dark:text-white text-xl font-bold line-through opacity-50">Brush Teeth</p>
+<div class="flex items-center gap-1 text-accent">
+<span class="material-symbols-outlined text-sm filled-icon">stars</span>
+<span class="text-xs font-black uppercase">Sparkly!</span>
+</div>
+</div>
+<div class="flex items-center justify-center size-10 shrink-0 rounded-full bg-success text-white">
+<span class="material-symbols-outlined text-2xl font-bold">check</span>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-3xl bg-white dark:bg-slate-800 p-4 border-4 border-primary shadow-md">
+<div class="size-20 shrink-0 bg-primary/5 dark:bg-primary/20 rounded-2xl flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined visual-support-icon !text-4xl">breakfast_dining</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="text-[#0e141b] dark:text-white text-xl font-bold">Eat Breakfast</p>
+<p class="text-primary text-xs font-black uppercase">Current Task</p>
+</div>
+<div class="flex items-center justify-center size-10 shrink-0 rounded-xl border-4 border-slate-200 dark:border-slate-600"></div>
+</div>
+<div class="flex items-center gap-4 rounded-3xl bg-white dark:bg-slate-800 p-4 border-2 border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="size-20 shrink-0 bg-slate-50 dark:bg-slate-700/50 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined visual-support-icon !text-4xl text-indigo-500">checkroom</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="text-[#0e141b] dark:text-white text-xl font-bold">Get Dressed</p>
+<p class="text-[#4e7397] dark:text-slate-400 font-medium">9:00 AM</p>
+</div>
+<div class="flex items-center justify-center size-10 shrink-0 rounded-xl border-4 border-slate-100 dark:border-slate-700"></div>
+</div>
+<div class="flex items-center gap-4 rounded-3xl bg-white dark:bg-slate-800 p-4 border-2 border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="size-20 shrink-0 bg-slate-50 dark:bg-slate-700/50 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined visual-support-icon !text-4xl text-orange-600">steps</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="text-[#0e141b] dark:text-white text-xl font-bold">Put on Shoes</p>
+<p class="text-[#4e7397] dark:text-slate-400 font-medium">9:15 AM</p>
+</div>
+<div class="flex items-center justify-center size-10 shrink-0 rounded-xl border-4 border-slate-100 dark:border-slate-700"></div>
+</div>
+<div class="flex items-center gap-4 rounded-3xl bg-white dark:bg-slate-800 p-4 border-2 border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="size-20 shrink-0 bg-slate-50 dark:bg-slate-700/50 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined visual-support-icon !text-4xl text-yellow-600">directions_bus</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="text-[#0e141b] dark:text-white text-xl font-bold">Go to School</p>
+<p class="text-[#4e7397] dark:text-slate-400 font-medium">9:30 AM</p>
+</div>
+<div class="flex items-center justify-center size-10 shrink-0 rounded-xl border-4 border-slate-100 dark:border-slate-700"></div>
+</div>
+</div>
+<nav class="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-20">
+    <a href="home.html" class="flex flex-col items-center gap-1 text-primary">
+    <span class="material-symbols-outlined text-2xl">home</span>
+    <span class="text-[10px] font-bold uppercase tracking-tight">Home</span>
+    </a>
+    <a href="emotion.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+    <span class="material-symbols-outlined text-2xl">mood</span>
+    <span class="text-[10px] font-bold uppercase tracking-tight">Emotion</span>
+    </a>
+    <a href="routine.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+    <span class="material-symbols-outlined text-2xl">event_note</span>
+    <span class="text-[10px] font-bold uppercase tracking-tight">Routine</span>
+    </a>
+    <a href="story.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+    <span class="material-symbols-outlined text-2xl">menu_book</span>
+    <span class="text-[10px] font-bold uppercase tracking-tight">Story</span>
+    </a>
+    <a href="report.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+    <span class="material-symbols-outlined text-2xl">dashboard</span>
+    <span class="text-[10px] font-bold uppercase tracking-tight">Report</span>
+    </a>
+    </nav>
+<button class="fixed bottom-24 right-4 sm:right-[calc(50%-220px)] flex size-14 items-center justify-center rounded-full bg-primary text-white shadow-2xl z-20 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+
+</body></html>

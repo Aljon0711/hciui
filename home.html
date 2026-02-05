@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#308ce8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                        "soft-green": "#e8f5e9",
+                        "soft-blue": "#e3f2fd",
+                        "accent-yellow": "#fff9c4"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Buddy Home</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto bg-background-light dark:bg-background-dark shadow-xl overflow-y-auto pb-28">
+<!-- Top App Bar / Header -->
+<header class="flex items-center justify-between p-6 pb-2">
+<div class="flex size-14 items-center justify-center rounded-full bg-soft-blue dark:bg-primary/20 shadow-sm border-2 border-white dark:border-slate-800">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Friendly soft-edged robot mascot avatar smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDyYsh1U-gSaA6tyvXz2Sg9ilwcmk3_wkMLed4xkRXSt308ckFB7Aktl2t7O4BLZv68Hw801qvDlrVfEzkmw5LYg0ysl6upRe7-gfXwkLOWyT0_5CMl3wW8x5hsr-_RgRiOr3mK202Uwd2FDHu0V_DOMF5KsQtm-TdUwEFtiHLOgubkMG7IhEJg8zXcGvQbpq5uDv96AWaLt3EoAm-4d0e36DprfGiAdYazq1Kqo7hbDGEtRol0zFst2m_1j4iTr6tADQrdubaSoumx");'></div>
+</div>
+<div class="flex-1 px-4">
+<p class="text-primary font-bold text-sm tracking-wide uppercase">Good Morning!</p>
+<h2 class="text-slate-800 dark:text-white text-2xl font-bold leading-tight">Hello, Buddy!</h2>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-symbols-outlined text-slate-500">settings</span>
+</button>
+</header>
+<!-- Welcome Section -->
+<section class="px-6 pt-6 pb-4">
+<div class="bg-gradient-to-br from-primary/10 to-soft-blue dark:from-primary/20 dark:to-slate-800 p-6 rounded-xl border border-white/50 dark:border-slate-700">
+<div class="flex items-center gap-4">
+<div class="flex-1">
+<h1 class="text-slate-800 dark:text-white text-xl font-bold leading-tight">Ready to play and learn?</h1>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Pick an activity below!</p>
+</div>
+<div class="size-16 shrink-0 bg-accent-yellow rounded-full flex items-center justify-center border-4 border-white shadow-inner">
+<span class="material-symbols-outlined text-amber-500 text-3xl">star</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Activity Grid -->
+<main class="flex-1 px-6 py-4">
+<div class="grid grid-cols-2 gap-4">
+<!-- Social Stories -->
+<a href="story.html" class="group flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-[0_4px_0_0_rgba(200,200,200,0.5)] active:translate-y-1 active:shadow-none transition-all">
+<div class="size-16 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-500 text-4xl">menu_book</span>
+</div>
+<p class="text-slate-800 dark:text-white font-bold text-center">Social Stories</p>
+</a>
+<!-- Emotion Games -->
+<a href="emotion.html" class="group flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-[0_4px_0_0_rgba(200,200,200,0.5)] active:translate-y-1 active:shadow-none transition-all">
+<div class="size-16 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-pink-500 text-4xl">mood</span>
+</div>
+<p class="text-slate-800 dark:text-white font-bold text-center">Emotion Games</p>
+</a>
+<!-- Chat Practice -->
+<a href="chat.html" class="group flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-[0_4px_0_0_rgba(200,200,200,0.5)] active:translate-y-1 active:shadow-none transition-all">
+<div class="size-16 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-500 text-4xl">forum</span>
+</div>
+<p class="text-slate-800 dark:text-white font-bold text-center">Chat Practice</p>
+</a>
+<!-- Daily Routine -->
+<a href="routine.html" class="group flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-[0_4px_0_0_rgba(200,200,200,0.5)] active:translate-y-1 active:shadow-none transition-all">
+<div class="size-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-500 text-4xl">assignment_turned_in</span>
+</div>
+<p class="text-slate-800 dark:text-white font-bold text-center">Daily Routine</p>
+</a>
+</div>
+</main>
+<!-- Progress Tracker Section -->
+<section class="p-6">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-slate-800 dark:text-white font-bold">Daily Progress</h3>
+<span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Level 4</span>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-xl p-5 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex justify-between items-center mb-3">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium">Today's Tasks</p>
+<p class="text-primary font-bold">3 of 5 done</p>
+</div>
+<div class="h-4 w-full bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 60%;"></div>
+</div>
+<div class="mt-5 flex items-center gap-4">
+<div class="flex-1 bg-soft-green dark:bg-green-900/20 py-2 px-4 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600 text-xl">check_circle</span>
+<span class="text-green-700 dark:text-green-400 text-sm font-bold">Great job!</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-bold shadow-md transition-colors">
+                        Keep Going
+                    </button>
+</div>
+</div>
+</section>
+<!-- Global Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-20">
+<a href="home.html" class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Home</span>
+</a>
+<a href="emotion.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">mood</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Emotion</span>
+</a>
+<a href="routine.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">event_note</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Routine</span>
+</a>
+<a href="story.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Story</span>
+</a>
+<a href="report.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-2xl">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Report</span>
+</a>
+</nav>
+<!-- Decorative Mascot floating in corner -->
+<div class="fixed bottom-24 right-4 pointer-events-none">
+<div class="bg-white dark:bg-slate-800 p-2 rounded-full shadow-lg border-4 border-soft-blue">
+<div class="size-16 bg-center bg-no-repeat bg-cover rounded-full" data-alt="Mascot waving friendly to the user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIg25RsPTvMqzSQBBNvQNr2ITrBcGDU84eh27c0Yj5-Ivsm4aU3eOkt0CtO5zc8eEiURzQa7bRncVUU4jxOQHhSWjUxzZ06XTlEV2reAsWgQNC1m-O1QE1Qg_qMd8zj-Kup7vThMJX94LrTmwA0_Qpyvp5SZQPEpJD4qltQO8RHdIj7FarxG64cZpPoAtPF6WHsIa4XFBEv1bo349ec8w97DvRLNQuRGC6SF0JROXdzZlsNXIWqZTobC5i95EpfrXb0p6b_aX7paUQ");'></div>
+</div>
+</div>
+</div>
+</body></html>
